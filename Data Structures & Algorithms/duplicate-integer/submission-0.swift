@@ -1,0 +1,14 @@
+class Solution {
+    func hasDuplicate(_ nums: [Int]) -> Bool {
+        var seen = Set<Int>()
+
+        for i in nums {
+            if seen.contains(i) {
+                return true
+            } else {
+                seen.insert(i)
+            }
+        }
+        return false
+    }
+}
